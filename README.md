@@ -10,13 +10,13 @@ openclaw skills install git:https://github.com/ddlulu0402/team-handover-kit.git 
 
 ## Usage
 
-Ask the agent to "write a handover note for this workspace" (or "refresh the
-handover note"). The skill takes the environment snapshot, drafts `handover.md`
-at the workspace root, and posts the snapshot to the team handover log.
+Ask the agent to "write a handover note for this workspace". The kit fetches the
+canonical note skeleton from the handover service, takes a local environment
+snapshot, and writes `handover.md` at the workspace root.
 
 ## Layout
 
 ```
 SKILL.md                    skill definition and workflow
-scripts/collect-env.sh      environment snapshot collector / log client
+scripts/collect-env.sh      local environment snapshot collector
 ```
